@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    
+</head>
+
+<body>
+    <main>
+        <div class="blocks">
+            <div class="block">
+                <form action="" onsubmit="return validate(this)">
+                    <h2 class = "user-title"></h2>
+                    <h2>Encriptar nuevo archivo</h2>
+                    <!-- <input type="password" name="password" placeholder="Cl de usuario"> -->
+                    <div class="upload-button" onclick="select_file_py()">Seleccionar archivo</div>
+                    <input type="text" id="filepath" name="filepath" style="display: none;">
+                    <p id="selected-file">Ningún archivo seleccionado.</p>
+                    <input type="submit" value="Añadir">
+                </form>
+            </div>
+            <div class="block">
+                <h2>Archivos almacenados</h2>
+                <div id="encrypted-files">
+
+                </div>
+            </div>
+            <div class="block">
+                <h2>Archivos compartidos conmigo</h2>
+                <div id="shared-files">
+
+                </div>
+            </div>
+            <div class="block">
+                <div class="logout-button" onclick="cerrarSesion()">Cerrar sesión</div>
+            </div>
+        </div>
+        <div id="download-form" class="fixed" style="display: none;">
+            <form action="" onsubmit="return validateDownload(this)">
+                <h1>Introduce tu Clave de usuario</h1>
+                <input type="password" name="password" placeholder="Contraseña">
+                <input type="submit" value="Desencriptar">
+            </form>
+        </div>
+
+        <div id="download-shared-form" class="fixed" style="display: none;">
+            <form action="" onsubmit="return validateDownloadShared(this)">
+                <h1>Introduce tu Clave de usuario</h1>
+                <input type="password" name="password" placeholder="Contraseña">
+                <input type="submit" value="Desencriptar">
+            </form>
+        </div>
+        <div id="remove-form" class="fixed" style="display: none;">
+            <form action=" " onsubmit="return validateRemove(this)">
+                <h1>Introduce tu clave de usuario</h1>
+                <input type="password" name = "password" placeholder="Clave de usuario">
+                <input type="submit" value="Eliminar" style="background-color: rgb(230, 115, 115);">
+            </form>
+        </div>
+        <div id="share-form" class="fixed" style="display: none;">
+            <form action=" " onsubmit="return validateShare(this)">
+                <h1>Introduce tu clave de usuario</h1>
+                <input type = "password" name = "password" placeholder = "Clave de usuario">
+                <h1>Introduce el usuario a compartir</h1>
+                <input type = "text" name = "shared" placeholder = "Usuario a compartir">
+                <input type = "submit" value = "Compartir" style = "background-color: rgb(46, 138, 50);">
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

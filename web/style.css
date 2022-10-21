@@ -1,0 +1,166 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #dfdfdf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blocks {
+    max-width: 500px;
+    margin: 20px;
+}
+
+.block {
+    box-sizing: border-box;
+    padding: 30px;
+    width: 100%;
+    margin: 20px 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.fixed {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0000001f;
+}
+
+.fixed form {
+    padding: 30px;
+    max-width: 500px;
+    margin: 20px 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+#selected-file {
+    margin-bottom: 0;
+}
+
+input,
+.logout-button,
+.upload-button {
+    box-sizing: border-box;
+    padding: 15px 15px;
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+input[type="password"],
+input[type="text"] {
+    background-color: rgb(231, 231, 231);
+}
+
+input[type="submit"],
+.logout-button,
+.upload-button {
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: #7fa2e9;
+}
+
+.upload-button {
+    display: block;
+    text-align: center;
+    background-color: #7fe984;
+}
+
+.logout-button {
+    display: block;
+    text-align: center;
+    background-color: #d84949;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+.item {
+    display: flow-root;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: rgb(231, 231, 231);
+}
+
+.name {
+    float: left;
+}
+
+.buttons {
+    display: flex;
+    float: right;
+}
+
+.download,
+.remove,
+.share,
+.download-share {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.download, .download-share {
+    color: rgb(56, 56, 246);
+}
+
+.remove {
+    color: rgb(230, 51, 51);
+}
+
+.share {
+    color: rgb(9, 109, 5);
+}
+
+
+/* Mensajes de error de los formularios */
+
+.error-message {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background: #ff5c5c;
+    border-radius: 10px;
+    color: #ffffff;
+    overflow-wrap: break-word;
+}
